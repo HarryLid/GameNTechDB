@@ -29,6 +29,8 @@ include 'adminCheck/navbarCheck.php';
         border: 1px solid #ccc;
         padding: 10px;
         position: relative;
+        background-color: black; /* Set container background to black */
+        color: white; /* Set text color to white */
     }
 
     .gallery:hover {
@@ -47,6 +49,7 @@ include 'adminCheck/navbarCheck.php';
         text-align: center;
         font-weight: bold;
         font-size: 1.2em;
+        color: white; /* Set text color to white */
     }
 
     /* Additional styles for the modal */
@@ -69,10 +72,6 @@ include 'adminCheck/navbarCheck.php';
         }
     }
 </style>
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -110,8 +109,8 @@ include 'adminCheck/navbarCheck.php';
                 echo '<div class="gallery">';
                 echo '<a href="#" data-title="' . $row['fldImageTitle'] . '" data-bio="' . $row['fldBio'] . '">';
                 echo '<img src="' . $row['fldPath'] . '" alt="' . $row['fldImageTitle'] . '" width="600" height="400">';
-                echo '<div class="desc"><span class="asc-title"  style="color: white;">Platforms: ' . getPlatforms($row) . '</span></div>';
-                echo '<div class="desc"><span class="asc-title" style="color: white;">Release Date: ' . $row['fldReleaseDate'] . '</span></div>';
+                echo '<div class="desc"><span class="asc-title">Platforms: ' . getPlatforms($row) . '</span></div>';
+                echo '<div class="desc"><span class="asc-title">Release Date: ' . $row['fldReleaseDate'] . '</span></div>';
                 echo '</a>';
                 echo '</div>';
             }
@@ -140,6 +139,10 @@ include 'adminCheck/navbarCheck.php';
             }
         ?>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <!-- Gallery Modal -->
     <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">

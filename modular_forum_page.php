@@ -195,6 +195,8 @@ if ($tempForum == true) {
                         <input type="submit" value="Add Comment">
                     </form>
                 </div>
+                <br>
+                <br>
 
             </body>
 
